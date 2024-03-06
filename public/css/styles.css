@@ -1,0 +1,125 @@
+/* Estilos generales */
+ 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center; /* Centramos el contenido en dispositivos móviles */
+}
+
+.menu-icon {
+    font-size: 4vw; /* Tamaño relativo al ancho de la pantalla (vw) */
+    cursor: pointer;
+}
+
+.header__navegacionCentral {
+    display: none; /* Ocultamos la navegación en dispositivos móviles */
+    text-align: center; /* Centramos el contenido en dispositivos móviles */
+}
+
+/* Estilos para la lista de navegación */
+.navegacionCentral__list {
+    list-style: none;
+    padding: 0;
+}
+
+.navegacionCentral__item {
+    margin: 2vw 0; /* Márgenes utilizando vw */
+    display: inline;
+}
+
+.navegacionCentral__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos para el contenido principal */
+.main {
+    padding: 20px;
+}
+
+/* Estilos para los productos */
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 90%; /* Usamos el 90% del ancho disponible */
+}
+
+.product__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product__image {
+    width: 100%; /* Las imágenes se ajustarán automáticamente al ancho del contenedor */
+}
+
+.product__description {
+    font-size: 14px;
+}
+
+.product__price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077cc;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center; /* Centramos el contenido en dispositivos móviles */
+}
+
+/* Estilos para los enlaces de contacto en el pie de página */
+.footer__contact-link {
+    color: #0077cc;
+}
+
+option:disabled{
+    color: orange;
+}
+
+label:hover{
+    background-color: red;
+}
+
+input:focus{
+    background-color: green;
+}
+
+
+/* Media Query para pantallas más grandes */
+@media (min-width: 768px ) {
+    .product{
+        width: 30%;
+    }
+    .header__navegacionCentral{
+        display: block;
+    }
+    .navegacionCentral__list {
+        text-align: center;
+    }
+    .navegacionCentral__item {
+        display: inline;
+        margin: 0 15px;
+    }
+    .menu-icon{
+        display: none;
+    }
+}
