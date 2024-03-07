@@ -1,8 +1,9 @@
 let productos = require('../models/products');
+const path = require('path');
 
 const productsController = { 
-    getAll: (req, res) => res.send("Estas viendo el listasdo de productos"),
-    getOne: (req, res) => res.send(productos.find((producto)=> producto.id == req.params.id))
+    getAll: (req, res) => res.sendFile(path.resolve(__dirname, '../views/index.html')),
+    getOne: (req, res) => res.send(`Estas viendo el detalle del producto nro ${req.params.id}`),
 }
 
 module.exports = productsController;
