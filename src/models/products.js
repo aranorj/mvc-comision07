@@ -99,11 +99,11 @@ const product = {
           }
         ],
 
-        getAllProducts: function () {
+        getAll: function () {
           return this.products;
         },
-        getProductById: function (productId) {
-          return this.products.find(product => product.id == productId);
+        getOneBy: function (id) {
+          return this.products.find(product => product.id == id);
         }
 }
 
